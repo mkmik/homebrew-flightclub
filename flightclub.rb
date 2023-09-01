@@ -5,20 +5,20 @@
 class Flightclub < Formula
   desc ""
   homepage "https://github.com/mkmik/flightclub"
-  version "0.0.4"
+  version "0.0.5"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/mkmik/flightclub/releases/download/v0.0.4/flightclub_0.0.4_darwin_amd64.tar.gz"
-      sha256 "61e006114db3a679493380ddae1c7e97db31a4f97e319d7e820ba595594bfa3d"
+    if Hardware::CPU.arm?
+      url "https://github.com/mkmik/flightclub/releases/download/v0.0.5/flightclub_0.0.5_darwin_arm64.tar.gz"
+      sha256 "6b27d142b296e84d8662576686d094eeeef10920c9c36bf1741784af6de28426"
 
       def install
         bin.install "flightclub"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/mkmik/flightclub/releases/download/v0.0.4/flightclub_0.0.4_darwin_arm64.tar.gz"
-      sha256 "26379a99b6bf5c5db4d466fd3b55b4483e8b99a0ce0f97565045c03137ee2823"
+    if Hardware::CPU.intel?
+      url "https://github.com/mkmik/flightclub/releases/download/v0.0.5/flightclub_0.0.5_darwin_amd64.tar.gz"
+      sha256 "48957fd88b64e4d5fb12824b55af08c529844dac0c306d9418a393a4d2e78264"
 
       def install
         bin.install "flightclub"
@@ -28,16 +28,16 @@ class Flightclub < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/mkmik/flightclub/releases/download/v0.0.4/flightclub_0.0.4_linux_amd64.tar.gz"
-      sha256 "3e6cf434fbd07bfc51d4e3735ca9d003a4eef7c0d42bb034c0e617097d04a434"
+      url "https://github.com/mkmik/flightclub/releases/download/v0.0.5/flightclub_0.0.5_linux_amd64.tar.gz"
+      sha256 "0df01ac7fc61888048ef802138cbdfd933273091e7d704a20725b2c5528cba59"
 
       def install
         bin.install "flightclub"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mkmik/flightclub/releases/download/v0.0.4/flightclub_0.0.4_linux_arm64.tar.gz"
-      sha256 "ebc2010cfcfc6b260817a8e6f1f99d11104431bdc04b25de4627233df42134c5"
+      url "https://github.com/mkmik/flightclub/releases/download/v0.0.5/flightclub_0.0.5_linux_arm64.tar.gz"
+      sha256 "983b70209336c4e20ed297a650bc8e296e4ec0621b57e70b7ad884dc40136823"
 
       def install
         bin.install "flightclub"
