@@ -5,20 +5,20 @@
 class Flightclub < Formula
   desc ""
   homepage "https://github.com/mkmik/flightclub"
-  version "0.0.3"
+  version "0.0.4"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/mkmik/flightclub/releases/download/v0.0.3/flightclub_0.0.3_darwin_amd64.tar.gz"
-      sha256 "abf14ec79b01ec31793b612669813c8beac09356da1d9c6f59dac1b3b2687ead"
+      url "https://github.com/mkmik/flightclub/releases/download/v0.0.4/flightclub_0.0.4_darwin_amd64.tar.gz"
+      sha256 "61e006114db3a679493380ddae1c7e97db31a4f97e319d7e820ba595594bfa3d"
 
       def install
         bin.install "flightclub"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/mkmik/flightclub/releases/download/v0.0.3/flightclub_0.0.3_darwin_arm64.tar.gz"
-      sha256 "60277f154699ac0f5644c423ab39583f9ce9f8029563ae4de96ccbf77869a0e6"
+      url "https://github.com/mkmik/flightclub/releases/download/v0.0.4/flightclub_0.0.4_darwin_arm64.tar.gz"
+      sha256 "26379a99b6bf5c5db4d466fd3b55b4483e8b99a0ce0f97565045c03137ee2823"
 
       def install
         bin.install "flightclub"
@@ -28,16 +28,16 @@ class Flightclub < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/mkmik/flightclub/releases/download/v0.0.3/flightclub_0.0.3_linux_amd64.tar.gz"
-      sha256 "0f98164011ded750ba5807153bf2b3b500ab2e6f7b56d73365ba55f1a111d03b"
+      url "https://github.com/mkmik/flightclub/releases/download/v0.0.4/flightclub_0.0.4_linux_amd64.tar.gz"
+      sha256 "3e6cf434fbd07bfc51d4e3735ca9d003a4eef7c0d42bb034c0e617097d04a434"
 
       def install
         bin.install "flightclub"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mkmik/flightclub/releases/download/v0.0.3/flightclub_0.0.3_linux_arm64.tar.gz"
-      sha256 "2c524acfea1bf414864c598e681bed9ba2564446666612d5fa77dcf14e073237"
+      url "https://github.com/mkmik/flightclub/releases/download/v0.0.4/flightclub_0.0.4_linux_arm64.tar.gz"
+      sha256 "ebc2010cfcfc6b260817a8e6f1f99d11104431bdc04b25de4627233df42134c5"
 
       def install
         bin.install "flightclub"
