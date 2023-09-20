@@ -5,20 +5,20 @@
 class Flightclub < Formula
   desc ""
   homepage "https://github.com/mkmik/flightclub"
-  version "0.0.5"
+  version "0.1.0"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/mkmik/flightclub/releases/download/v0.0.5/flightclub_0.0.5_darwin_arm64.tar.gz"
-      sha256 "6b27d142b296e84d8662576686d094eeeef10920c9c36bf1741784af6de28426"
+    if Hardware::CPU.intel?
+      url "https://github.com/mkmik/flightclub/releases/download/v0.1.0/flightclub_0.1.0_darwin_amd64.tar.gz"
+      sha256 "c4e351fd085af4188f0f6b4741ab2a2dd53f1df83694570a9270a876a4b55a56"
 
       def install
         bin.install "flightclub"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/mkmik/flightclub/releases/download/v0.0.5/flightclub_0.0.5_darwin_amd64.tar.gz"
-      sha256 "48957fd88b64e4d5fb12824b55af08c529844dac0c306d9418a393a4d2e78264"
+    if Hardware::CPU.arm?
+      url "https://github.com/mkmik/flightclub/releases/download/v0.1.0/flightclub_0.1.0_darwin_arm64.tar.gz"
+      sha256 "7cebd86f3b8dbb8e8a7e6842afac20f14aeb9a212c7198d6d87bea21807ae9f5"
 
       def install
         bin.install "flightclub"
@@ -27,17 +27,17 @@ class Flightclub < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/mkmik/flightclub/releases/download/v0.0.5/flightclub_0.0.5_linux_amd64.tar.gz"
-      sha256 "0df01ac7fc61888048ef802138cbdfd933273091e7d704a20725b2c5528cba59"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/mkmik/flightclub/releases/download/v0.1.0/flightclub_0.1.0_linux_arm64.tar.gz"
+      sha256 "2e4dba6369dbf52869ae8cfa7a41c3553a001f1c51addb9250606ac809a6e8e5"
 
       def install
         bin.install "flightclub"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mkmik/flightclub/releases/download/v0.0.5/flightclub_0.0.5_linux_arm64.tar.gz"
-      sha256 "983b70209336c4e20ed297a650bc8e296e4ec0621b57e70b7ad884dc40136823"
+    if Hardware::CPU.intel?
+      url "https://github.com/mkmik/flightclub/releases/download/v0.1.0/flightclub_0.1.0_linux_amd64.tar.gz"
+      sha256 "e5829173c57b0263d00288281029342dfeefed71de0bfa2b6d7330329e211480"
 
       def install
         bin.install "flightclub"
